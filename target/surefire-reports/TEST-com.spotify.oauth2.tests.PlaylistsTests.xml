@@ -1,0 +1,917 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="com.spotify.oauth2.tests.PlaylistsTests" time="17.146" tests="8" errors="0" skipped="0" failures="6">
+  <properties>
+    <property name="java.specification.version" value="17"/>
+    <property name="sun.cpu.isalist" value="amd64"/>
+    <property name="sun.jnu.encoding" value="Cp1252"/>
+    <property name="java.class.path" value="C:\Users\Home\eclipse-workspace\SpotifyRestAssured\target\test-classes;C:\Users\Home\eclipse-workspace\SpotifyRestAssured\target\classes;C:\Users\Home\.m2\repository\io\rest-assured\rest-assured\5.3.0\rest-assured-5.3.0.jar;C:\Users\Home\.m2\repository\org\apache\groovy\groovy\4.0.6\groovy-4.0.6.jar;C:\Users\Home\.m2\repository\org\apache\groovy\groovy-xml\4.0.6\groovy-xml-4.0.6.jar;C:\Users\Home\.m2\repository\org\apache\httpcomponents\httpclient\4.5.13\httpclient-4.5.13.jar;C:\Users\Home\.m2\repository\commons-logging\commons-logging\1.2\commons-logging-1.2.jar;C:\Users\Home\.m2\repository\org\apache\httpcomponents\httpmime\4.5.13\httpmime-4.5.13.jar;C:\Users\Home\.m2\repository\org\ccil\cowan\tagsoup\tagsoup\1.2.1\tagsoup-1.2.1.jar;C:\Users\Home\.m2\repository\io\rest-assured\json-path\5.3.0\json-path-5.3.0.jar;C:\Users\Home\.m2\repository\org\apache\groovy\groovy-json\4.0.6\groovy-json-4.0.6.jar;C:\Users\Home\.m2\repository\io\rest-assured\rest-assured-common\5.3.0\rest-assured-common-5.3.0.jar;C:\Users\Home\.m2\repository\io\rest-assured\xml-path\5.3.0\xml-path-5.3.0.jar;C:\Users\Home\.m2\repository\org\apache\commons\commons-lang3\3.11\commons-lang3-3.11.jar;C:\Users\Home\.m2\repository\org\hamcrest\hamcrest-all\1.3\hamcrest-all-1.3.jar;C:\Users\Home\.m2\repository\org\hamcrest\hamcrest\2.2\hamcrest-2.2.jar;C:\Users\Home\.m2\repository\org\testng\testng\7.7.1\testng-7.7.1.jar;C:\Users\Home\.m2\repository\org\slf4j\slf4j-api\1.7.36\slf4j-api-1.7.36.jar;C:\Users\Home\.m2\repository\com\beust\jcommander\1.82\jcommander-1.82.jar;C:\Users\Home\.m2\repository\org\webjars\jquery\3.6.1\jquery-3.6.1.jar;C:\Users\Home\.m2\repository\com\fasterxml\jackson\core\jackson-databind\2.15.1\jackson-databind-2.15.1.jar;C:\Users\Home\.m2\repository\com\fasterxml\jackson\core\jackson-annotations\2.15.1\jackson-annotations-2.15.1.jar;C:\Users\Home\.m2\repository\com\fasterxml\jackson\core\jackson-core\2.15.1\jackson-core-2.15.1.jar;C:\Users\Home\.m2\repository\com\google\api-client\google-api-client\2.2.0\google-api-client-2.2.0.jar;C:\Users\Home\.m2\repository\commons-codec\commons-codec\1.15\commons-codec-1.15.jar;C:\Users\Home\.m2\repository\com\google\oauth-client\google-oauth-client\1.34.1\google-oauth-client-1.34.1.jar;C:\Users\Home\.m2\repository\com\google\http-client\google-http-client-gson\1.42.3\google-http-client-gson-1.42.3.jar;C:\Users\Home\.m2\repository\com\google\code\gson\gson\2.10\gson-2.10.jar;C:\Users\Home\.m2\repository\com\google\guava\guava\31.1-jre\guava-31.1-jre.jar;C:\Users\Home\.m2\repository\com\google\guava\failureaccess\1.0.1\failureaccess-1.0.1.jar;C:\Users\Home\.m2\repository\com\google\guava\listenablefuture\9999.0-empty-to-avoid-conflict-with-guava\listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar;C:\Users\Home\.m2\repository\com\google\code\findbugs\jsr305\3.0.2\jsr305-3.0.2.jar;C:\Users\Home\.m2\repository\org\checkerframework\checker-qual\3.12.0\checker-qual-3.12.0.jar;C:\Users\Home\.m2\repository\com\google\errorprone\error_prone_annotations\2.11.0\error_prone_annotations-2.11.0.jar;C:\Users\Home\.m2\repository\com\google\j2objc\j2objc-annotations\1.3\j2objc-annotations-1.3.jar;C:\Users\Home\.m2\repository\com\google\http-client\google-http-client-apache-v2\1.42.3\google-http-client-apache-v2-1.42.3.jar;C:\Users\Home\.m2\repository\org\apache\httpcomponents\httpcore\4.4.16\httpcore-4.4.16.jar;C:\Users\Home\.m2\repository\com\google\http-client\google-http-client\1.42.3\google-http-client-1.42.3.jar;C:\Users\Home\.m2\repository\io\opencensus\opencensus-api\0.31.1\opencensus-api-0.31.1.jar;C:\Users\Home\.m2\repository\io\grpc\grpc-context\1.27.2\grpc-context-1.27.2.jar;C:\Users\Home\.m2\repository\io\opencensus\opencensus-contrib-http-util\0.31.1\opencensus-contrib-http-util-0.31.1.jar;C:\Users\Home\.m2\repository\com\google\api-client\google-api-client-extensions\1.6.0-beta\google-api-client-extensions-1.6.0-beta.jar;C:\Users\Home\.m2\repository\com\google\oauth-client\google-oauth-client-extensions\1.6.0-beta\google-oauth-client-extensions-1.6.0-beta.jar;C:\Users\Home\.m2\repository\com\googlecode\jsontoken\jsontoken\1.0\jsontoken-1.0.jar;C:\Users\Home\.m2\repository\com\google\collections\google-collections\1.0\google-collections-1.0.jar;C:\Users\Home\.m2\repository\joda-time\joda-time\1.6\joda-time-1.6.jar;C:\Users\Home\.m2\repository\javax\servlet\servlet-api\2.5\servlet-api-2.5.jar;C:\Users\Home\.m2\repository\javax\jdo\jdo2-api\2.3-eb\jdo2-api-2.3-eb.jar;C:\Users\Home\.m2\repository\javax\transaction\transaction-api\1.1\transaction-api-1.1.jar;C:\Users\Home\.m2\repository\com\google\http-client\google-http-client-extensions\1.6.0-beta\google-http-client-extensions-1.6.0-beta.jar;C:\Users\Home\.m2\repository\com\google\apis\google-api-services-gmail\v1-rev110-1.25.0\google-api-services-gmail-v1-rev110-1.25.0.jar;C:\Users\Home\.m2\repository\org\projectlombok\lombok\1.18.28\lombok-1.18.28.jar;C:\Users\Home\.m2\repository\io\qameta\allure\allure-testng\2.23.0\allure-testng-2.23.0.jar;C:\Users\Home\.m2\repository\io\qameta\allure\allure-java-commons\2.23.0\allure-java-commons-2.23.0.jar;C:\Users\Home\.m2\repository\io\qameta\allure\allure-model\2.23.0\allure-model-2.23.0.jar;C:\Users\Home\.m2\repository\io\qameta\allure\allure-test-filter\2.23.0\allure-test-filter-2.23.0.jar;"/>
+    <property name="java.vm.vendor" value="Oracle Corporation"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="user.variant" value=""/>
+    <property name="java.vendor.url" value="https://java.oracle.com/"/>
+    <property name="user.timezone" value="Asia/Calcutta"/>
+    <property name="os.name" value="Windows 10"/>
+    <property name="java.vm.specification.version" value="17"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="user.country" value="US"/>
+    <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk-17.0.4.1\bin"/>
+    <property name="sun.java.command" value="C:\Users\Home\AppData\Local\Temp\surefire3267541237218108653\surefirebooter-20230802213529728_3.jar C:\Users\Home\AppData\Local\Temp\surefire3267541237218108653 2023-08-02T21-35-28_117-jvmRun1 surefire-20230802213529728_1tmp surefire_0-20230802213529728_2tmp"/>
+    <property name="jdk.debug" value="release"/>
+    <property name="surefire.test.class.path" value="C:\Users\Home\eclipse-workspace\SpotifyRestAssured\target\test-classes;C:\Users\Home\eclipse-workspace\SpotifyRestAssured\target\classes;C:\Users\Home\.m2\repository\io\rest-assured\rest-assured\5.3.0\rest-assured-5.3.0.jar;C:\Users\Home\.m2\repository\org\apache\groovy\groovy\4.0.6\groovy-4.0.6.jar;C:\Users\Home\.m2\repository\org\apache\groovy\groovy-xml\4.0.6\groovy-xml-4.0.6.jar;C:\Users\Home\.m2\repository\org\apache\httpcomponents\httpclient\4.5.13\httpclient-4.5.13.jar;C:\Users\Home\.m2\repository\commons-logging\commons-logging\1.2\commons-logging-1.2.jar;C:\Users\Home\.m2\repository\org\apache\httpcomponents\httpmime\4.5.13\httpmime-4.5.13.jar;C:\Users\Home\.m2\repository\org\ccil\cowan\tagsoup\tagsoup\1.2.1\tagsoup-1.2.1.jar;C:\Users\Home\.m2\repository\io\rest-assured\json-path\5.3.0\json-path-5.3.0.jar;C:\Users\Home\.m2\repository\org\apache\groovy\groovy-json\4.0.6\groovy-json-4.0.6.jar;C:\Users\Home\.m2\repository\io\rest-assured\rest-assured-common\5.3.0\rest-assured-common-5.3.0.jar;C:\Users\Home\.m2\repository\io\rest-assured\xml-path\5.3.0\xml-path-5.3.0.jar;C:\Users\Home\.m2\repository\org\apache\commons\commons-lang3\3.11\commons-lang3-3.11.jar;C:\Users\Home\.m2\repository\org\hamcrest\hamcrest-all\1.3\hamcrest-all-1.3.jar;C:\Users\Home\.m2\repository\org\hamcrest\hamcrest\2.2\hamcrest-2.2.jar;C:\Users\Home\.m2\repository\org\testng\testng\7.7.1\testng-7.7.1.jar;C:\Users\Home\.m2\repository\org\slf4j\slf4j-api\1.7.36\slf4j-api-1.7.36.jar;C:\Users\Home\.m2\repository\com\beust\jcommander\1.82\jcommander-1.82.jar;C:\Users\Home\.m2\repository\org\webjars\jquery\3.6.1\jquery-3.6.1.jar;C:\Users\Home\.m2\repository\com\fasterxml\jackson\core\jackson-databind\2.15.1\jackson-databind-2.15.1.jar;C:\Users\Home\.m2\repository\com\fasterxml\jackson\core\jackson-annotations\2.15.1\jackson-annotations-2.15.1.jar;C:\Users\Home\.m2\repository\com\fasterxml\jackson\core\jackson-core\2.15.1\jackson-core-2.15.1.jar;C:\Users\Home\.m2\repository\com\google\api-client\google-api-client\2.2.0\google-api-client-2.2.0.jar;C:\Users\Home\.m2\repository\commons-codec\commons-codec\1.15\commons-codec-1.15.jar;C:\Users\Home\.m2\repository\com\google\oauth-client\google-oauth-client\1.34.1\google-oauth-client-1.34.1.jar;C:\Users\Home\.m2\repository\com\google\http-client\google-http-client-gson\1.42.3\google-http-client-gson-1.42.3.jar;C:\Users\Home\.m2\repository\com\google\code\gson\gson\2.10\gson-2.10.jar;C:\Users\Home\.m2\repository\com\google\guava\guava\31.1-jre\guava-31.1-jre.jar;C:\Users\Home\.m2\repository\com\google\guava\failureaccess\1.0.1\failureaccess-1.0.1.jar;C:\Users\Home\.m2\repository\com\google\guava\listenablefuture\9999.0-empty-to-avoid-conflict-with-guava\listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar;C:\Users\Home\.m2\repository\com\google\code\findbugs\jsr305\3.0.2\jsr305-3.0.2.jar;C:\Users\Home\.m2\repository\org\checkerframework\checker-qual\3.12.0\checker-qual-3.12.0.jar;C:\Users\Home\.m2\repository\com\google\errorprone\error_prone_annotations\2.11.0\error_prone_annotations-2.11.0.jar;C:\Users\Home\.m2\repository\com\google\j2objc\j2objc-annotations\1.3\j2objc-annotations-1.3.jar;C:\Users\Home\.m2\repository\com\google\http-client\google-http-client-apache-v2\1.42.3\google-http-client-apache-v2-1.42.3.jar;C:\Users\Home\.m2\repository\org\apache\httpcomponents\httpcore\4.4.16\httpcore-4.4.16.jar;C:\Users\Home\.m2\repository\com\google\http-client\google-http-client\1.42.3\google-http-client-1.42.3.jar;C:\Users\Home\.m2\repository\io\opencensus\opencensus-api\0.31.1\opencensus-api-0.31.1.jar;C:\Users\Home\.m2\repository\io\grpc\grpc-context\1.27.2\grpc-context-1.27.2.jar;C:\Users\Home\.m2\repository\io\opencensus\opencensus-contrib-http-util\0.31.1\opencensus-contrib-http-util-0.31.1.jar;C:\Users\Home\.m2\repository\com\google\api-client\google-api-client-extensions\1.6.0-beta\google-api-client-extensions-1.6.0-beta.jar;C:\Users\Home\.m2\repository\com\google\oauth-client\google-oauth-client-extensions\1.6.0-beta\google-oauth-client-extensions-1.6.0-beta.jar;C:\Users\Home\.m2\repository\com\googlecode\jsontoken\jsontoken\1.0\jsontoken-1.0.jar;C:\Users\Home\.m2\repository\com\google\collections\google-collections\1.0\google-collections-1.0.jar;C:\Users\Home\.m2\repository\joda-time\joda-time\1.6\joda-time-1.6.jar;C:\Users\Home\.m2\repository\javax\servlet\servlet-api\2.5\servlet-api-2.5.jar;C:\Users\Home\.m2\repository\javax\jdo\jdo2-api\2.3-eb\jdo2-api-2.3-eb.jar;C:\Users\Home\.m2\repository\javax\transaction\transaction-api\1.1\transaction-api-1.1.jar;C:\Users\Home\.m2\repository\com\google\http-client\google-http-client-extensions\1.6.0-beta\google-http-client-extensions-1.6.0-beta.jar;C:\Users\Home\.m2\repository\com\google\apis\google-api-services-gmail\v1-rev110-1.25.0\google-api-services-gmail-v1-rev110-1.25.0.jar;C:\Users\Home\.m2\repository\org\projectlombok\lombok\1.18.28\lombok-1.18.28.jar;C:\Users\Home\.m2\repository\io\qameta\allure\allure-testng\2.23.0\allure-testng-2.23.0.jar;C:\Users\Home\.m2\repository\io\qameta\allure\allure-java-commons\2.23.0\allure-java-commons-2.23.0.jar;C:\Users\Home\.m2\repository\io\qameta\allure\allure-model\2.23.0\allure-model-2.23.0.jar;C:\Users\Home\.m2\repository\io\qameta\allure\allure-test-filter\2.23.0\allure-test-filter-2.23.0.jar;"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="user.home" value="C:\Users\Home"/>
+    <property name="user.language" value="en"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.version.date" value="2022-08-18"/>
+    <property name="java.home" value="C:\Program Files\Java\jdk-17.0.4.1"/>
+    <property name="file.separator" value="\"/>
+    <property name="style.color" value="always"/>
+    <property name="basedir" value="C:\Users\Home\eclipse-workspace\SpotifyRestAssured"/>
+    <property name="java.vm.compressedOopsMode" value="Zero based"/>
+    <property name="line.separator" value="&#10;"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="surefire.real.class.path" value="C:\Users\Home\AppData\Local\Temp\surefire3267541237218108653\surefirebooter-20230802213529728_3.jar"/>
+    <property name="user.script" value=""/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="java.runtime.version" value="17.0.4.1+1-LTS-2"/>
+    <property name="user.name" value="Home"/>
+    <property name="path.separator" value=";"/>
+    <property name="os.version" value="10.0"/>
+    <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
+    <property name="file.encoding" value="Cp1252"/>
+    <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM"/>
+    <property name="localRepository" value="C:\Users\Home\.m2\repository"/>
+    <property name="java.vendor.url.bug" value="https://bugreport.java.com/bugreport/"/>
+    <property name="java.io.tmpdir" value="C:\Users\Home\AppData\Local\Temp\"/>
+    <property name="java.version" value="17.0.4.1"/>
+    <property name="user.dir" value="C:\Users\Home\eclipse-workspace\SpotifyRestAssured"/>
+    <property name="os.arch" value="amd64"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="sun.os.patch.level" value=""/>
+    <property name="native.encoding" value="Cp1252"/>
+    <property name="java.library.path" value="C:\Program Files\Java\jdk-17.0.4.1\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Program Files\Common Files\Oracle\Java\javapath;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\iCLS\;C:\Program Files\Intel\Intel(R) Management Engine Components\iCLS\;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files\Java\jdk-17.0.4.1\bin;C:\Users\Home\AppData\Local\Microsoft\WindowsApps;;."/>
+    <property name="java.vm.info" value="mixed mode, sharing"/>
+    <property name="java.vendor" value="Oracle Corporation"/>
+    <property name="java.vm.version" value="17.0.4.1+1-LTS-2"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
+    <property name="java.class.version" value="61.0"/>
+  </properties>
+  <testcase name="shouldBeAbleToCreatePlayList" classname="com.spotify.oauth2.tests.PlaylistsTests" time="7.643">
+    <failure message="&#10;Expected: &lt;201&gt;&#10;     but: was &lt;401&gt;" type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError: 
+
+Expected: <201>
+     but: was <401>
+	at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:20)
+	at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:8)
+	at com.spotify.oauth2.tests.PlaylistsTests.shouldBeAbleToCreatePlayList(PlaylistsTests.java:67)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:969)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:829)
+	at org.testng.TestRunner.run(TestRunner.java:602)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:437)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:431)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:391)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:330)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
+	at org.testng.TestNG.runSuites(TestNG.java:1099)
+	at org.testng.TestNG.run(TestNG.java:1067)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:155)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.executeSingleClass(TestNGDirectoryTestSuite.java:102)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.execute(TestNGDirectoryTestSuite.java:91)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:137)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
+	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
+]]></failure>
+    <system-out><![CDATA[Request method:	POST
+Request URI:	https://api.spotify.com/v1/users/31as6vbffn66s54gznqe5vicq5oa/playlists
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Authorization=Bearer BQC8pxQLblf-OVJ6DPfL7Z2Fjp1DOWN-dXXrrCpO1c0mmSyNU0_74hWz_PfexF4Z5deVuNlZ4iVp0duKdFlmyj5DyzyeKGyFK_iLNf7BOF3i_mo3tuIU43SB8ZlGg_ythQWvfbafRqqksCb9TA2ZxG5SisMdxRp49ePV2Tdh4lcTniofMdnLYJqeZna0AjebaMOWJDRqEe8npnl5f_JHcmOf3F1e9M7jl7FMT1i3IiD2IyJZxDHFBmzGatcQvUX0ebcuWJWQ7rUbumCa
+				Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "description": "Pojo Code created first playlist",
+    "name": "Playlist No_3 By PageClass+ResusableSpecBuilder+Pojoclass",
+    "public": false
+}
+HTTP/1.1 401 Unauthorized
+www-authenticate: Bearer realm="spotify", error="invalid_token", error_description="The access token expired"
+access-control-allow-origin: *
+access-control-allow-headers: Accept, App-Platform, Authorization, Content-Type, Origin, Retry-After, Spotify-App-Version, X-Cloud-Trace-Context, client-token, content-access-token
+access-control-allow-methods: GET, POST, OPTIONS, PUT, DELETE, PATCH
+access-control-allow-credentials: true
+access-control-max-age: 604800
+content-type: application/json
+content-encoding: gzip
+strict-transport-security: max-age=31536000
+x-content-type-options: nosniff
+date: Wed, 02 Aug 2023 16:05:41 GMT
+server: envoy
+Via: HTTP/2 edgeproxy, 1.1 google
+Alt-Svc: h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
+Transfer-Encoding: chunked
+
+{
+    "error": {
+        "status": 401,
+        "message": "The access token expired"
+    }
+}
+]]></system-out>
+    <system-err><![CDATA[SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
+SLF4J: Defaulting to no-operation (NOP) logger implementation
+SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
+]]></system-err>
+  </testcase>
+  <testcase name="shouldBeAbleToCreatePlayListRestResourceAdvanced" classname="com.spotify.oauth2.tests.PlaylistsTests" time="4.017">
+    <system-out><![CDATA[Request method:	POST
+Request URI:	https://accounts.spotify.com/api/token
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	refresh_token=AQAj8QneRzi6BU6L6xGNVgTvpOAkdm7YrY2mw7pnGtob3t6YlsP58KOX8GgO6cCJd4Icya3O5ZU-ihHWskzVWD8blRf5xW8lLa2Wiy-jMzjWIWsyOKk1X_MQO9ROCWh-gys
+				grant_type=refresh_token
+				client_secret=430d722d0ade4935a94839412ff5a466
+				client_id=172fe0d4f2e741cf8804b1d0f90f43d4
+Path params:	<none>
+Headers:		Accept=*/*
+				Content-Type=application/x-www-form-urlencoded; charset=ISO-8859-1
+Cookies:		<none>
+Multiparts:		<none>
+Body:			<none>
+HTTP/1.1 200 OK
+date: Wed, 02 Aug 2023 16:05:43 GMT
+content-type: application/json
+vary: Accept-Encoding
+set-cookie: __Host-device_id=AQArvDQ4Qu3oYCJ5Y8XwbLSsnq4IccuBDsO78wv5uJFLWPB7RJ3YMrFee1PPo8JNYV_2OFbnsoM3yphuTNUEA6ynsJRMPFb4Zyw;Version=1;Path=/;Max-Age=2147483647;Secure;HttpOnly;SameSite=Lax
+set-cookie: sp_tr=false;Version=1;Domain=accounts.spotify.com;Path=/;Secure;SameSite=Lax
+sp-trace-id: f9d361b245219440
+content-encoding: gzip
+x-envoy-upstream-service-time: 41
+server: envoy
+strict-transport-security: max-age=31536000
+x-content-type-options: nosniff
+Via: HTTP/2 edgeproxy, 1.1 google
+Alt-Svc: h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
+Transfer-Encoding: chunked
+
+{
+    "access_token": "BQDn1-yZ6QZtv8kR8LjMqYLbUu2Cs6rvKoNBPWG10RKu_FFu-TjhuJgC9GLoa8a1HRIsU2AAoEZbega4_jx0dEC45jWyherZnyNOZa3ErhqOfCju8TmqjJ2H42EYu4JcEgraj4UXYOi6v3jYqXCFnMX06d-plYDQrOdiLz5-JHcNbLs20S-jG4OcxZjsLppP7VsEOHyVta2wSqaHVxRhk1wejuoGXFTgVs6xVDgK3nFbhOeWvykatgGu_ibj0Ng_6ca4Ub-5nb8Q9zoy",
+    "token_type": "Bearer",
+    "expires_in": 3600,
+    "scope": "playlist-read-private playlist-read-collaborative playlist-modify-private playlist-modify-public"
+}
+Request method:	POST
+Request URI:	https://api.spotify.com/v1/users/31as6vbffn66s54gznqe5vicq5oa/playlists
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Authorization=Bearer BQDn1-yZ6QZtv8kR8LjMqYLbUu2Cs6rvKoNBPWG10RKu_FFu-TjhuJgC9GLoa8a1HRIsU2AAoEZbega4_jx0dEC45jWyherZnyNOZa3ErhqOfCju8TmqjJ2H42EYu4JcEgraj4UXYOi6v3jYqXCFnMX06d-plYDQrOdiLz5-JHcNbLs20S-jG4OcxZjsLppP7VsEOHyVta2wSqaHVxRhk1wejuoGXFTgVs6xVDgK3nFbhOeWvykatgGu_ibj0Ng_6ca4Ub-5nb8Q9zoy
+				Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "description": "Pojo Code created first playlist",
+    "name": "Playlist After Allure",
+    "public": false
+}
+HTTP/1.1 201 Created
+content-type: application/json; charset=utf-8
+cache-control: private, max-age=0
+location: https://api.spotify.com/v1/playlists/0OPEmYa8ujOM548lNt9JT2
+x-robots-tag: noindex, nofollow
+access-control-allow-origin: *
+access-control-allow-headers: Accept, App-Platform, Authorization, Content-Type, Origin, Retry-After, Spotify-App-Version, X-Cloud-Trace-Context, client-token, content-access-token
+access-control-allow-methods: GET, POST, OPTIONS, PUT, DELETE, PATCH
+access-control-allow-credentials: true
+access-control-max-age: 604800
+content-encoding: gzip
+strict-transport-security: max-age=31536000
+x-content-type-options: nosniff
+date: Wed, 02 Aug 2023 16:05:45 GMT
+server: envoy
+Via: HTTP/2 edgeproxy, 1.1 google
+Alt-Svc: h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
+Transfer-Encoding: chunked
+
+{
+    "collaborative": false,
+    "description": "Pojo Code created first playlist",
+    "external_urls": {
+        "spotify": "https://open.spotify.com/playlist/0OPEmYa8ujOM548lNt9JT2"
+    },
+    "followers": {
+        "href": null,
+        "total": 0
+    },
+    "href": "https://api.spotify.com/v1/playlists/0OPEmYa8ujOM548lNt9JT2",
+    "id": "0OPEmYa8ujOM548lNt9JT2",
+    "images": [
+        
+    ],
+    "name": "Playlist After Allure",
+    "owner": {
+        "display_name": "Siva",
+        "external_urls": {
+            "spotify": "https://open.spotify.com/user/31as6vbffn66s54gznqe5vicq5oa"
+        },
+        "href": "https://api.spotify.com/v1/users/31as6vbffn66s54gznqe5vicq5oa",
+        "id": "31as6vbffn66s54gznqe5vicq5oa",
+        "type": "user",
+        "uri": "spotify:user:31as6vbffn66s54gznqe5vicq5oa"
+    },
+    "primary_color": null,
+    "public": false,
+    "snapshot_id": "MSw2MGM2N2NiNWM0MGUwMWNiNmMwOWNlZGNjOGIzNzgxZmM5NGJmNDZi",
+    "tracks": {
+        "href": "https://api.spotify.com/v1/playlists/0OPEmYa8ujOM548lNt9JT2/tracks",
+        "items": [
+            
+        ],
+        "limit": 100,
+        "next": null,
+        "offset": 0,
+        "previous": null,
+        "total": 0
+    },
+    "type": "playlist",
+    "uri": "spotify:playlist:0OPEmYa8ujOM548lNt9JT2"
+}
+]]></system-out>
+  </testcase>
+  <testcase name="shouldBeAbleToGetPlayList" classname="com.spotify.oauth2.tests.PlaylistsTests" time="0.222">
+    <failure message="com.fasterxml.jackson.databind.exc.UnrecognizedPropertyException: Unrecognized field &quot;error&quot; (class com.spotify.oauth2.pojo.Playlist), not marked as ignorable (15 known properties: &quot;primary_color&quot;, &quot;tracks&quot;, &quot;public&quot;, &quot;href&quot;, &quot;uri&quot;, &quot;owner&quot;, &quot;collaborative&quot;, &quot;snapshot_id&quot;, &quot;external_urls&quot;, &quot;type&quot;, &quot;id&quot;, &quot;description&quot;, &quot;name&quot;, &quot;followers&quot;, &quot;images&quot;])&#10; at [Source: (String)&quot;{&#10;  &quot;error&quot;: {&#10;    &quot;status&quot;: 401,&#10;    &quot;message&quot;: &quot;The access token expired&quot;&#10;  }&#10;}&quot;; line: 2, column: 13] (through reference chain: com.spotify.oauth2.pojo.Playlist[&quot;error&quot;])" type="java.lang.RuntimeException"><![CDATA[java.lang.RuntimeException: 
+com.fasterxml.jackson.databind.exc.UnrecognizedPropertyException: Unrecognized field "error" (class com.spotify.oauth2.pojo.Playlist), not marked as ignorable (15 known properties: "primary_color", "tracks", "public", "href", "uri", "owner", "collaborative", "snapshot_id", "external_urls", "type", "id", "description", "name", "followers", "images"])
+ at [Source: (String)"{
+  "error": {
+    "status": 401,
+    "message": "The access token expired"
+  }
+}"; line: 2, column: 13] (through reference chain: com.spotify.oauth2.pojo.Playlist["error"])
+	at io.restassured.internal.path.json.mapping.JsonPathJackson2ObjectDeserializer.deserialize(JsonPathJackson2ObjectDeserializer.java:30)
+	at io.restassured.path.json.mapping.JsonPathObjectDeserializer$deserialize.call(Unknown Source)
+	at io.restassured.internal.mapping.Jackson2Mapper.deserialize(Jackson2Mapper.groovy:58)
+	at io.restassured.mapper.ObjectMapper$deserialize$0.call(Unknown Source)
+	at io.restassured.internal.mapping.ObjectMapping.parseWithJackson2(ObjectMapping.groovy:254)
+	at io.restassured.internal.mapping.ObjectMapping$parseWithJackson2$1.callStatic(Unknown Source)
+	at io.restassured.internal.mapping.ObjectMapping.deserialize(ObjectMapping.groovy:56)
+	at io.restassured.internal.mapping.ObjectMapping$deserialize$0.call(Unknown Source)
+	at io.restassured.internal.RestAssuredResponseOptionsGroovyImpl.as(RestAssuredResponseOptionsGroovyImpl.groovy:229)
+	at io.restassured.internal.RestAssuredResponseOptionsImpl.as(RestAssuredResponseOptionsImpl.java:169)
+	at com.spotify.oauth2.tests.PlaylistsTests.shouldBeAbleToGetPlayList(PlaylistsTests.java:94)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:969)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:829)
+	at org.testng.TestRunner.run(TestRunner.java:602)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:437)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:431)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:391)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:330)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
+	at org.testng.TestNG.runSuites(TestNG.java:1099)
+	at org.testng.TestNG.run(TestNG.java:1067)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:155)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.executeSingleClass(TestNGDirectoryTestSuite.java:102)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.execute(TestNGDirectoryTestSuite.java:91)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:137)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
+	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
+Caused by: com.fasterxml.jackson.databind.exc.UnrecognizedPropertyException: Unrecognized field "error" (class com.spotify.oauth2.pojo.Playlist), not marked as ignorable (15 known properties: "primary_color", "tracks", "public", "href", "uri", "owner", "collaborative", "snapshot_id", "external_urls", "type", "id", "description", "name", "followers", "images"])
+ at [Source: (String)"{
+  "error": {
+    "status": 401,
+    "message": "The access token expired"
+  }
+}"; line: 2, column: 13] (through reference chain: com.spotify.oauth2.pojo.Playlist["error"])
+	at com.fasterxml.jackson.databind.exc.UnrecognizedPropertyException.from(UnrecognizedPropertyException.java:61)
+	at com.fasterxml.jackson.databind.DeserializationContext.handleUnknownProperty(DeserializationContext.java:1138)
+	at com.fasterxml.jackson.databind.deser.std.StdDeserializer.handleUnknownProperty(StdDeserializer.java:2224)
+	at com.fasterxml.jackson.databind.deser.BeanDeserializerBase.handleUnknownProperty(BeanDeserializerBase.java:1709)
+	at com.fasterxml.jackson.databind.deser.BeanDeserializerBase.handleUnknownVanilla(BeanDeserializerBase.java:1687)
+	at com.fasterxml.jackson.databind.deser.BeanDeserializer.vanillaDeserialize(BeanDeserializer.java:320)
+	at com.fasterxml.jackson.databind.deser.BeanDeserializer.deserialize(BeanDeserializer.java:177)
+	at com.fasterxml.jackson.databind.deser.DefaultDeserializationContext.readRootValue(DefaultDeserializationContext.java:323)
+	at com.fasterxml.jackson.databind.ObjectMapper._readMapAndClose(ObjectMapper.java:4825)
+	at com.fasterxml.jackson.databind.ObjectMapper.readValue(ObjectMapper.java:3772)
+	at io.restassured.internal.path.json.mapping.JsonPathJackson2ObjectDeserializer.deserialize(JsonPathJackson2ObjectDeserializer.java:28)
+	... 43 more
+]]></failure>
+    <system-out><![CDATA[Request method:	GET
+Request URI:	https://api.spotify.com/v1/playlists/7KrgeQjlyhhS2sElPLbD8W
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Authorization=Bearer BQC8pxQLblf-OVJ6DPfL7Z2Fjp1DOWN-dXXrrCpO1c0mmSyNU0_74hWz_PfexF4Z5deVuNlZ4iVp0duKdFlmyj5DyzyeKGyFK_iLNf7BOF3i_mo3tuIU43SB8ZlGg_ythQWvfbafRqqksCb9TA2ZxG5SisMdxRp49ePV2Tdh4lcTniofMdnLYJqeZna0AjebaMOWJDRqEe8npnl5f_JHcmOf3F1e9M7jl7FMT1i3IiD2IyJZxDHFBmzGatcQvUX0ebcuWJWQ7rUbumCa
+				Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:			<none>
+HTTP/1.1 401 Unauthorized
+www-authenticate: Bearer realm="spotify", error="invalid_token", error_description="The access token expired"
+access-control-allow-origin: *
+access-control-allow-headers: Accept, App-Platform, Authorization, Content-Type, Origin, Retry-After, Spotify-App-Version, X-Cloud-Trace-Context, client-token, content-access-token
+access-control-allow-methods: GET, POST, OPTIONS, PUT, DELETE, PATCH
+access-control-allow-credentials: true
+access-control-max-age: 604800
+content-type: application/json
+content-encoding: gzip
+strict-transport-security: max-age=31536000
+x-content-type-options: nosniff
+date: Wed, 02 Aug 2023 16:05:46 GMT
+server: envoy
+Via: HTTP/2 edgeproxy, 1.1 google
+Alt-Svc: h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
+Transfer-Encoding: chunked
+
+{
+    "error": {
+        "status": 401,
+        "message": "The access token expired"
+    }
+}
+]]></system-out>
+  </testcase>
+  <testcase name="shouldBeAbleToGetPlayListAdvanced" classname="com.spotify.oauth2.tests.PlaylistsTests" time="0.754">
+    <system-out><![CDATA[Request method:	POST
+Request URI:	https://accounts.spotify.com/api/token
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	refresh_token=AQAj8QneRzi6BU6L6xGNVgTvpOAkdm7YrY2mw7pnGtob3t6YlsP58KOX8GgO6cCJd4Icya3O5ZU-ihHWskzVWD8blRf5xW8lLa2Wiy-jMzjWIWsyOKk1X_MQO9ROCWh-gys
+				grant_type=refresh_token
+				client_secret=430d722d0ade4935a94839412ff5a466
+				client_id=172fe0d4f2e741cf8804b1d0f90f43d4
+Path params:	<none>
+Headers:		Accept=*/*
+				Content-Type=application/x-www-form-urlencoded; charset=ISO-8859-1
+Cookies:		<none>
+Multiparts:		<none>
+Body:			<none>
+HTTP/1.1 200 OK
+date: Wed, 02 Aug 2023 16:05:46 GMT
+content-type: application/json
+vary: Accept-Encoding
+set-cookie: __Host-device_id=AQAUXykSx3DvoABgO4m2dq7d3-NQFvkYKj-TFS4BARas6Ld0ul7D5-k8TWN9KgE2zQa8qVlmjvwuk2vrqhLowKb9XPx1nAePIa8;Version=1;Path=/;Max-Age=2147483647;Secure;HttpOnly;SameSite=Lax
+set-cookie: sp_tr=false;Version=1;Domain=accounts.spotify.com;Path=/;Secure;SameSite=Lax
+sp-trace-id: 3136fd19fbf616cb
+content-encoding: gzip
+x-envoy-upstream-service-time: 19
+server: envoy
+strict-transport-security: max-age=31536000
+x-content-type-options: nosniff
+Via: HTTP/2 edgeproxy, 1.1 google
+Alt-Svc: h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
+Transfer-Encoding: chunked
+
+{
+    "access_token": "BQB9P9-15wLtkGfY-mh5wp5qc0MXYx9vfxxcpw2_cf1mvgAEtGCR8IN6MnNBCan_6ZIJgQ5yT12HjsvCq0b-dQs2w5kvj2XJ7PigyvRGS3GKXI4eq39ejFUuGMhOv3EqRS1FnHPou8wOxU-gQjTVCexqbyojuIMlXgSMMV_hk-7mdbecMrLgKPJh9hTS5QNTr1NAor66y9ElDkOieGGfeyHAvwbnj-BUCbNdX3rEr_VPq1enRVTYReRHB4PK_Z65HjjnwXkJmwBEHdM4",
+    "token_type": "Bearer",
+    "expires_in": 3600,
+    "scope": "playlist-read-private playlist-read-collaborative playlist-modify-private playlist-modify-public"
+}
+Request method:	GET
+Request URI:	https://api.spotify.com/v1/playlists/7KrgeQjlyhhS2sElPLbD8W
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Authorization=Bearer BQB9P9-15wLtkGfY-mh5wp5qc0MXYx9vfxxcpw2_cf1mvgAEtGCR8IN6MnNBCan_6ZIJgQ5yT12HjsvCq0b-dQs2w5kvj2XJ7PigyvRGS3GKXI4eq39ejFUuGMhOv3EqRS1FnHPou8wOxU-gQjTVCexqbyojuIMlXgSMMV_hk-7mdbecMrLgKPJh9hTS5QNTr1NAor66y9ElDkOieGGfeyHAvwbnj-BUCbNdX3rEr_VPq1enRVTYReRHB4PK_Z65HjjnwXkJmwBEHdM4
+				Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:			<none>
+HTTP/1.1 200 OK
+content-type: application/json; charset=utf-8
+cache-control: public, max-age=0
+etag: "MC-ImZmNzEzZDQyZGQ1ZTUzMzc4N2IwYzViYWI4MDg4OTk3Ig=="
+x-robots-tag: noindex, nofollow
+access-control-allow-origin: *
+access-control-allow-headers: Accept, App-Platform, Authorization, Content-Type, Origin, Retry-After, Spotify-App-Version, X-Cloud-Trace-Context, client-token, content-access-token
+access-control-allow-methods: GET, POST, OPTIONS, PUT, DELETE, PATCH
+access-control-allow-credentials: true
+access-control-max-age: 604800
+content-encoding: gzip
+strict-transport-security: max-age=31536000
+x-content-type-options: nosniff
+date: Wed, 02 Aug 2023 16:05:46 GMT
+server: envoy
+Via: HTTP/2 edgeproxy, 1.1 google
+Alt-Svc: h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
+Transfer-Encoding: chunked
+
+{
+    "collaborative": false,
+    "description": "Pojo Code created first playlist is now Updated by Script",
+    "external_urls": {
+        "spotify": "https://open.spotify.com/playlist/7KrgeQjlyhhS2sElPLbD8W"
+    },
+    "followers": {
+        "href": null,
+        "total": 0
+    },
+    "href": "https://api.spotify.com/v1/playlists/7KrgeQjlyhhS2sElPLbD8W",
+    "id": "7KrgeQjlyhhS2sElPLbD8W",
+    "images": [
+        
+    ],
+    "name": "Playlist By REstREsoruceAdvanced",
+    "owner": {
+        "display_name": "Siva",
+        "external_urls": {
+            "spotify": "https://open.spotify.com/user/31as6vbffn66s54gznqe5vicq5oa"
+        },
+        "href": "https://api.spotify.com/v1/users/31as6vbffn66s54gznqe5vicq5oa",
+        "id": "31as6vbffn66s54gznqe5vicq5oa",
+        "type": "user",
+        "uri": "spotify:user:31as6vbffn66s54gznqe5vicq5oa"
+    },
+    "primary_color": null,
+    "public": false,
+    "snapshot_id": "NixkOWRmMTAyNjVhMDU2NGRjZTdkMzJjYTI0ODZiMjE0OGRmOTYxYzVh",
+    "tracks": {
+        "href": "https://api.spotify.com/v1/playlists/7KrgeQjlyhhS2sElPLbD8W/tracks?offset=0&limit=100",
+        "items": [
+            
+        ],
+        "limit": 100,
+        "next": null,
+        "offset": 0,
+        "previous": null,
+        "total": 0
+    },
+    "type": "playlist",
+    "uri": "spotify:playlist:7KrgeQjlyhhS2sElPLbD8W"
+}
+]]></system-out>
+  </testcase>
+  <testcase name="shouldBeAbleToUpdateAPlayList" classname="com.spotify.oauth2.tests.PlaylistsTests" time="0.233">
+    <failure message="com.fasterxml.jackson.databind.exc.UnrecognizedPropertyException: Unrecognized field &quot;error&quot; (class com.spotify.oauth2.pojo.Playlist), not marked as ignorable (15 known properties: &quot;primary_color&quot;, &quot;tracks&quot;, &quot;public&quot;, &quot;href&quot;, &quot;uri&quot;, &quot;owner&quot;, &quot;collaborative&quot;, &quot;snapshot_id&quot;, &quot;external_urls&quot;, &quot;type&quot;, &quot;id&quot;, &quot;description&quot;, &quot;name&quot;, &quot;followers&quot;, &quot;images&quot;])&#10; at [Source: (String)&quot;{&#10;  &quot;error&quot;: {&#10;    &quot;status&quot;: 401,&#10;    &quot;message&quot;: &quot;The access token expired&quot;&#10;  }&#10;}&quot;; line: 2, column: 13] (through reference chain: com.spotify.oauth2.pojo.Playlist[&quot;error&quot;])" type="java.lang.RuntimeException"><![CDATA[java.lang.RuntimeException: 
+com.fasterxml.jackson.databind.exc.UnrecognizedPropertyException: Unrecognized field "error" (class com.spotify.oauth2.pojo.Playlist), not marked as ignorable (15 known properties: "primary_color", "tracks", "public", "href", "uri", "owner", "collaborative", "snapshot_id", "external_urls", "type", "id", "description", "name", "followers", "images"])
+ at [Source: (String)"{
+  "error": {
+    "status": 401,
+    "message": "The access token expired"
+  }
+}"; line: 2, column: 13] (through reference chain: com.spotify.oauth2.pojo.Playlist["error"])
+	at io.restassured.internal.path.json.mapping.JsonPathJackson2ObjectDeserializer.deserialize(JsonPathJackson2ObjectDeserializer.java:30)
+	at io.restassured.path.json.mapping.JsonPathObjectDeserializer$deserialize.call(Unknown Source)
+	at io.restassured.internal.mapping.Jackson2Mapper.deserialize(Jackson2Mapper.groovy:58)
+	at io.restassured.mapper.ObjectMapper$deserialize$0.call(Unknown Source)
+	at io.restassured.internal.mapping.ObjectMapping.parseWithJackson2(ObjectMapping.groovy:254)
+	at io.restassured.internal.mapping.ObjectMapping$parseWithJackson2$1.callStatic(Unknown Source)
+	at io.restassured.internal.mapping.ObjectMapping.deserialize(ObjectMapping.groovy:56)
+	at io.restassured.internal.mapping.ObjectMapping$deserialize$0.call(Unknown Source)
+	at io.restassured.internal.RestAssuredResponseOptionsGroovyImpl.as(RestAssuredResponseOptionsGroovyImpl.groovy:229)
+	at io.restassured.internal.RestAssuredResponseOptionsImpl.as(RestAssuredResponseOptionsImpl.java:169)
+	at com.spotify.oauth2.tests.PlaylistsTests.shouldBeAbleToUpdateAPlayList(PlaylistsTests.java:117)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:969)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:829)
+	at org.testng.TestRunner.run(TestRunner.java:602)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:437)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:431)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:391)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:330)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
+	at org.testng.TestNG.runSuites(TestNG.java:1099)
+	at org.testng.TestNG.run(TestNG.java:1067)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:155)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.executeSingleClass(TestNGDirectoryTestSuite.java:102)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.execute(TestNGDirectoryTestSuite.java:91)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:137)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
+	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
+Caused by: com.fasterxml.jackson.databind.exc.UnrecognizedPropertyException: Unrecognized field "error" (class com.spotify.oauth2.pojo.Playlist), not marked as ignorable (15 known properties: "primary_color", "tracks", "public", "href", "uri", "owner", "collaborative", "snapshot_id", "external_urls", "type", "id", "description", "name", "followers", "images"])
+ at [Source: (String)"{
+  "error": {
+    "status": 401,
+    "message": "The access token expired"
+  }
+}"; line: 2, column: 13] (through reference chain: com.spotify.oauth2.pojo.Playlist["error"])
+	at com.fasterxml.jackson.databind.exc.UnrecognizedPropertyException.from(UnrecognizedPropertyException.java:61)
+	at com.fasterxml.jackson.databind.DeserializationContext.handleUnknownProperty(DeserializationContext.java:1138)
+	at com.fasterxml.jackson.databind.deser.std.StdDeserializer.handleUnknownProperty(StdDeserializer.java:2224)
+	at com.fasterxml.jackson.databind.deser.BeanDeserializerBase.handleUnknownProperty(BeanDeserializerBase.java:1709)
+	at com.fasterxml.jackson.databind.deser.BeanDeserializerBase.handleUnknownVanilla(BeanDeserializerBase.java:1687)
+	at com.fasterxml.jackson.databind.deser.BeanDeserializer.vanillaDeserialize(BeanDeserializer.java:320)
+	at com.fasterxml.jackson.databind.deser.BeanDeserializer.deserialize(BeanDeserializer.java:177)
+	at com.fasterxml.jackson.databind.deser.DefaultDeserializationContext.readRootValue(DefaultDeserializationContext.java:323)
+	at com.fasterxml.jackson.databind.ObjectMapper._readMapAndClose(ObjectMapper.java:4825)
+	at com.fasterxml.jackson.databind.ObjectMapper.readValue(ObjectMapper.java:3772)
+	at io.restassured.internal.path.json.mapping.JsonPathJackson2ObjectDeserializer.deserialize(JsonPathJackson2ObjectDeserializer.java:28)
+	... 43 more
+]]></failure>
+    <system-out><![CDATA[Request method:	PUT
+Request URI:	https://api.spotify.com/v1/playlists/7KrgeQjlyhhS2sElPLbD8W
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Authorization=Bearer BQC8pxQLblf-OVJ6DPfL7Z2Fjp1DOWN-dXXrrCpO1c0mmSyNU0_74hWz_PfexF4Z5deVuNlZ4iVp0duKdFlmyj5DyzyeKGyFK_iLNf7BOF3i_mo3tuIU43SB8ZlGg_ythQWvfbafRqqksCb9TA2ZxG5SisMdxRp49ePV2Tdh4lcTniofMdnLYJqeZna0AjebaMOWJDRqEe8npnl5f_JHcmOf3F1e9M7jl7FMT1i3IiD2IyJZxDHFBmzGatcQvUX0ebcuWJWQ7rUbumCa
+				Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "description": "Pojo Code created first playlist is now Updated by Script",
+    "name": "Playlist By PageClass+ResusableSpecBuilder+Pojoclass",
+    "public": false
+}
+HTTP/1.1 401 Unauthorized
+www-authenticate: Bearer realm="spotify", error="invalid_token", error_description="The access token expired"
+access-control-allow-origin: *
+access-control-allow-headers: Accept, App-Platform, Authorization, Content-Type, Origin, Retry-After, Spotify-App-Version, X-Cloud-Trace-Context, client-token, content-access-token
+access-control-allow-methods: GET, POST, OPTIONS, PUT, DELETE, PATCH
+access-control-allow-credentials: true
+access-control-max-age: 604800
+content-type: application/json
+content-encoding: gzip
+strict-transport-security: max-age=31536000
+x-content-type-options: nosniff
+date: Wed, 02 Aug 2023 16:05:47 GMT
+server: envoy
+Via: HTTP/2 edgeproxy, 1.1 google
+Alt-Svc: h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
+Transfer-Encoding: chunked
+
+{
+    "error": {
+        "status": 401,
+        "message": "The access token expired"
+    }
+}
+]]></system-out>
+  </testcase>
+  <testcase name="shouldBeAbleToUpdateAPlayListAdvanced" classname="com.spotify.oauth2.tests.PlaylistsTests" time="0.649">
+    <failure message="1 expectation failed.&#10;Expected content-type &quot;JSON&quot; doesn&apos;t match actual content-type &quot;&quot;.&#10;" type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError: 
+1 expectation failed.
+Expected content-type "JSON" doesn't match actual content-type "".
+
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.codehaus.groovy.reflection.CachedConstructor.invoke(CachedConstructor.java:73)
+	at org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrapNoCoerce.callConstructor(ConstructorSite.java:108)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallConstructor(CallSiteArray.java:57)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:263)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:277)
+	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure.validate(ResponseSpecificationImpl.groovy:512)
+	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure$validate$1.call(Unknown Source)
+	at io.restassured.internal.ResponseSpecificationImpl.validate(ResponseSpecificationImpl.groovy:101)
+	at io.restassured.internal.ValidatableResponseOptionsImpl.spec(ValidatableResponseOptionsImpl.java:288)
+	at com.spotify.oauth2.api.RestResource.update(RestResource.java:48)
+	at com.spotify.oauth2.applicationApi.PlaylistApi.updateUsingRestResource(PlaylistApi.java:32)
+	at com.spotify.oauth2.tests.PlaylistsTests.shouldBeAbleToUpdateAPlayListAdvanced(PlaylistsTests.java:127)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:969)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:829)
+	at org.testng.TestRunner.run(TestRunner.java:602)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:437)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:431)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:391)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:330)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
+	at org.testng.TestNG.runSuites(TestNG.java:1099)
+	at org.testng.TestNG.run(TestNG.java:1067)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:155)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.executeSingleClass(TestNGDirectoryTestSuite.java:102)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.execute(TestNGDirectoryTestSuite.java:91)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:137)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
+	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
+]]></failure>
+    <system-out><![CDATA[Request method:	POST
+Request URI:	https://accounts.spotify.com/api/token
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	refresh_token=AQAj8QneRzi6BU6L6xGNVgTvpOAkdm7YrY2mw7pnGtob3t6YlsP58KOX8GgO6cCJd4Icya3O5ZU-ihHWskzVWD8blRf5xW8lLa2Wiy-jMzjWIWsyOKk1X_MQO9ROCWh-gys
+				grant_type=refresh_token
+				client_secret=430d722d0ade4935a94839412ff5a466
+				client_id=172fe0d4f2e741cf8804b1d0f90f43d4
+Path params:	<none>
+Headers:		Accept=*/*
+				Content-Type=application/x-www-form-urlencoded; charset=ISO-8859-1
+Cookies:		<none>
+Multiparts:		<none>
+Body:			<none>
+HTTP/1.1 200 OK
+date: Wed, 02 Aug 2023 16:05:47 GMT
+content-type: application/json
+vary: Accept-Encoding
+set-cookie: __Host-device_id=AQBRIos9wLjPCZVqtshLW2f5HPSPbWQARZgTmNwHZGUxX-uTpkXyu8lRAPyjqYIGhZL7aROWPnbDaVvNy62x9rOOjnAI9CMMUHo;Version=1;Path=/;Max-Age=2147483647;Secure;HttpOnly;SameSite=Lax
+set-cookie: sp_tr=false;Version=1;Domain=accounts.spotify.com;Path=/;Secure;SameSite=Lax
+sp-trace-id: fefa120137d726bf
+content-encoding: gzip
+x-envoy-upstream-service-time: 20
+server: envoy
+strict-transport-security: max-age=31536000
+x-content-type-options: nosniff
+Via: HTTP/2 edgeproxy, 1.1 google
+Alt-Svc: h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
+Transfer-Encoding: chunked
+
+{
+    "access_token": "BQB03JZpwfU6suFmkpVga4WJWyN-xM4lXLdYn7jUyoISLaDB8FtrpYMWon0cRKP7tmlyaf1hm19ig2dzpwbl_UO1ztpz9jASH-c8GXAgyUL-9wo_ReiJ0nySdom8c5U1lkbJOM5RRMSmbW5cVsMK8gqJz3TY3Z1qTJVWZovfekhsDsJiPhi3VU7m0U3RCuVREFnJAvGGyjQDdBjfzq7JC3qd7--2gAcqPDWQPXIkcFZXlR3ByuWT7pLNUC67bu8m6cW12yKOsNI3O4to",
+    "token_type": "Bearer",
+    "expires_in": 3600,
+    "scope": "playlist-read-private playlist-read-collaborative playlist-modify-private playlist-modify-public"
+}
+Request method:	PUT
+Request URI:	https://api.spotify.com/v1/playlists/7KrgeQjlyhhS2sElPLbD8W
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Authorization=Bearer BQB03JZpwfU6suFmkpVga4WJWyN-xM4lXLdYn7jUyoISLaDB8FtrpYMWon0cRKP7tmlyaf1hm19ig2dzpwbl_UO1ztpz9jASH-c8GXAgyUL-9wo_ReiJ0nySdom8c5U1lkbJOM5RRMSmbW5cVsMK8gqJz3TY3Z1qTJVWZovfekhsDsJiPhi3VU7m0U3RCuVREFnJAvGGyjQDdBjfzq7JC3qd7--2gAcqPDWQPXIkcFZXlR3ByuWT7pLNUC67bu8m6cW12yKOsNI3O4to
+				Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "description": "Pojo Code created first playlist is now Updated by Script",
+    "name": "Playlist By REstREsoruceAdvanced",
+    "public": false
+}
+HTTP/1.1 200 OK
+cache-control: private, max-age=0
+x-robots-tag: noindex, nofollow
+access-control-allow-origin: *
+access-control-allow-headers: Accept, App-Platform, Authorization, Content-Type, Origin, Retry-After, Spotify-App-Version, X-Cloud-Trace-Context, client-token, content-access-token
+access-control-allow-methods: GET, POST, OPTIONS, PUT, DELETE, PATCH
+access-control-allow-credentials: true
+access-control-max-age: 604800
+Content-Length: 0
+strict-transport-security: max-age=31536000
+x-content-type-options: nosniff
+date: Wed, 02 Aug 2023 16:05:47 GMT
+server: envoy
+Via: HTTP/2 edgeproxy, 1.1 google
+Alt-Svc: h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
+]]></system-out>
+  </testcase>
+  <testcase name="shouldNotBeAbleToCreatePlayListWithInvalidToken" classname="com.spotify.oauth2.tests.PlaylistsTests" time="0.205">
+    <failure message="com.fasterxml.jackson.databind.exc.UnrecognizedPropertyException: Unrecognized field &quot;error&quot; (class com.spotify.oauth2.pojo.Errorr), not marked as ignorable (2 known properties: &quot;status&quot;, &quot;message&quot;])&#10; at [Source: (String)&quot;{&#10;  &quot;error&quot;: {&#10;    &quot;status&quot;: 401,&#10;    &quot;message&quot;: &quot;Invalid access token&quot;&#10;  }&#10;}&quot;; line: 2, column: 13] (through reference chain: com.spotify.oauth2.pojo.Errorr[&quot;error&quot;])" type="java.lang.RuntimeException"><![CDATA[java.lang.RuntimeException: 
+com.fasterxml.jackson.databind.exc.UnrecognizedPropertyException: Unrecognized field "error" (class com.spotify.oauth2.pojo.Errorr), not marked as ignorable (2 known properties: "status", "message"])
+ at [Source: (String)"{
+  "error": {
+    "status": 401,
+    "message": "Invalid access token"
+  }
+}"; line: 2, column: 13] (through reference chain: com.spotify.oauth2.pojo.Errorr["error"])
+	at io.restassured.internal.path.json.mapping.JsonPathJackson2ObjectDeserializer.deserialize(JsonPathJackson2ObjectDeserializer.java:30)
+	at io.restassured.path.json.mapping.JsonPathObjectDeserializer$deserialize.call(Unknown Source)
+	at io.restassured.internal.mapping.Jackson2Mapper.deserialize(Jackson2Mapper.groovy:58)
+	at io.restassured.mapper.ObjectMapper$deserialize$0.call(Unknown Source)
+	at io.restassured.internal.mapping.ObjectMapping.parseWithJackson2(ObjectMapping.groovy:254)
+	at io.restassured.internal.mapping.ObjectMapping$parseWithJackson2$1.callStatic(Unknown Source)
+	at io.restassured.internal.mapping.ObjectMapping.deserialize(ObjectMapping.groovy:56)
+	at io.restassured.internal.mapping.ObjectMapping$deserialize$0.call(Unknown Source)
+	at io.restassured.internal.RestAssuredResponseOptionsGroovyImpl.as(RestAssuredResponseOptionsGroovyImpl.groovy:229)
+	at io.restassured.internal.RestAssuredResponseOptionsImpl.as(RestAssuredResponseOptionsImpl.java:169)
+	at com.spotify.oauth2.tests.PlaylistsTests.shouldNotBeAbleToCreatePlayListWithInvalidToken(PlaylistsTests.java:151)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:969)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:829)
+	at org.testng.TestRunner.run(TestRunner.java:602)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:437)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:431)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:391)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:330)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
+	at org.testng.TestNG.runSuites(TestNG.java:1099)
+	at org.testng.TestNG.run(TestNG.java:1067)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:155)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.executeSingleClass(TestNGDirectoryTestSuite.java:102)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.execute(TestNGDirectoryTestSuite.java:91)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:137)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
+	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
+Caused by: com.fasterxml.jackson.databind.exc.UnrecognizedPropertyException: Unrecognized field "error" (class com.spotify.oauth2.pojo.Errorr), not marked as ignorable (2 known properties: "status", "message"])
+ at [Source: (String)"{
+  "error": {
+    "status": 401,
+    "message": "Invalid access token"
+  }
+}"; line: 2, column: 13] (through reference chain: com.spotify.oauth2.pojo.Errorr["error"])
+	at com.fasterxml.jackson.databind.exc.UnrecognizedPropertyException.from(UnrecognizedPropertyException.java:61)
+	at com.fasterxml.jackson.databind.DeserializationContext.handleUnknownProperty(DeserializationContext.java:1138)
+	at com.fasterxml.jackson.databind.deser.std.StdDeserializer.handleUnknownProperty(StdDeserializer.java:2224)
+	at com.fasterxml.jackson.databind.deser.BeanDeserializerBase.handleUnknownProperty(BeanDeserializerBase.java:1709)
+	at com.fasterxml.jackson.databind.deser.BeanDeserializerBase.handleUnknownVanilla(BeanDeserializerBase.java:1687)
+	at com.fasterxml.jackson.databind.deser.BeanDeserializer.vanillaDeserialize(BeanDeserializer.java:320)
+	at com.fasterxml.jackson.databind.deser.BeanDeserializer.deserialize(BeanDeserializer.java:177)
+	at com.fasterxml.jackson.databind.deser.DefaultDeserializationContext.readRootValue(DefaultDeserializationContext.java:323)
+	at com.fasterxml.jackson.databind.ObjectMapper._readMapAndClose(ObjectMapper.java:4825)
+	at com.fasterxml.jackson.databind.ObjectMapper.readValue(ObjectMapper.java:3772)
+	at io.restassured.internal.path.json.mapping.JsonPathJackson2ObjectDeserializer.deserialize(JsonPathJackson2ObjectDeserializer.java:28)
+	... 43 more
+]]></failure>
+    <system-out><![CDATA[Request method:	POST
+Request URI:	https://api.spotify.com/v1/users/31as6vbffn66s54gznqe5vicq5oa/playlists
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Authorization=Bearer 123inValidToken456boom
+				Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "name": "Playlist By Script",
+    "description": "Code created first playlist",
+    "public": false
+}
+]]></system-out>
+  </testcase>
+  <testcase name="shouldNotBeAbleToCreatePlayListWithoutName" classname="com.spotify.oauth2.tests.PlaylistsTests" time="0.214">
+    <failure message="&#10;Expected: &lt;400&gt;&#10;     but: was &lt;401&gt;" type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError: 
+
+Expected: <400>
+     but: was <401>
+	at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:20)
+	at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:8)
+	at com.spotify.oauth2.tests.PlaylistsTests.shouldNotBeAbleToCreatePlayListWithoutName(PlaylistsTests.java:138)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:969)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:829)
+	at org.testng.TestRunner.run(TestRunner.java:602)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:437)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:431)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:391)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:330)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
+	at org.testng.TestNG.runSuites(TestNG.java:1099)
+	at org.testng.TestNG.run(TestNG.java:1067)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:155)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.executeSingleClass(TestNGDirectoryTestSuite.java:102)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.execute(TestNGDirectoryTestSuite.java:91)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:137)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
+	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
+]]></failure>
+    <system-out><![CDATA[Request method:	POST
+Request URI:	https://api.spotify.com/v1/users/31as6vbffn66s54gznqe5vicq5oa/playlists
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Authorization=Bearer BQC8pxQLblf-OVJ6DPfL7Z2Fjp1DOWN-dXXrrCpO1c0mmSyNU0_74hWz_PfexF4Z5deVuNlZ4iVp0duKdFlmyj5DyzyeKGyFK_iLNf7BOF3i_mo3tuIU43SB8ZlGg_ythQWvfbafRqqksCb9TA2ZxG5SisMdxRp49ePV2Tdh4lcTniofMdnLYJqeZna0AjebaMOWJDRqEe8npnl5f_JHcmOf3F1e9M7jl7FMT1i3IiD2IyJZxDHFBmzGatcQvUX0ebcuWJWQ7rUbumCa
+				Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "description": "Pojo Code created first playlist with empty name",
+    "name": "",
+    "public": false
+}
+HTTP/1.1 401 Unauthorized
+www-authenticate: Bearer realm="spotify", error="invalid_token", error_description="The access token expired"
+access-control-allow-origin: *
+access-control-allow-headers: Accept, App-Platform, Authorization, Content-Type, Origin, Retry-After, Spotify-App-Version, X-Cloud-Trace-Context, client-token, content-access-token
+access-control-allow-methods: GET, POST, OPTIONS, PUT, DELETE, PATCH
+access-control-allow-credentials: true
+access-control-max-age: 604800
+content-type: application/json
+content-encoding: gzip
+strict-transport-security: max-age=31536000
+x-content-type-options: nosniff
+date: Wed, 02 Aug 2023 16:05:48 GMT
+server: envoy
+Via: HTTP/2 edgeproxy, 1.1 google
+Alt-Svc: h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
+Transfer-Encoding: chunked
+
+{
+    "error": {
+        "status": 401,
+        "message": "The access token expired"
+    }
+}
+]]></system-out>
+  </testcase>
+</testsuite>
